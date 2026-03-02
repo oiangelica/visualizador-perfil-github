@@ -51,7 +51,9 @@ main {
   flex-direction: column;
   padding: var(--spacing-2xl) var(--spacing-md);
 }
-
+main a { 
+  margin-bottom: 1rem;
+}
 .devicon-github-original {
   font-size: var(--font-3xl);
   margin-bottom: var(--spacing-xl);
@@ -149,7 +151,8 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .profile-infos {
@@ -194,4 +197,23 @@ main {
   font-size: var(--font-sm);
   color: var(--muted-foreground);
   margin: 0;
+}
+
+.profile-counters {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin: 80px 0;
+}
+
+.profile-counters h4 {
+  font-weight: normal;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.profile-counters span {
+  font-size: 2rem;
+  font-weight: bold;
 }
