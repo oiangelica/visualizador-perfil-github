@@ -36,8 +36,39 @@ export const UI = {
             <span>${userData.following}</span>
           </div>
         </div>
-      
+      <div class="repositories">
+        <h3>Repositórios</h3>
+        <ul class="repo-list"></ul>
+      </div>
     `;
+  },
+
+  renderRepos(repos) {
+    const repoList = document.querySelector('.repo-list');
+    
+    if (repos.length === 0) {
+      repoList.innerHTML = '<li>Este usuário não possui repositórios públicos.</li>';
+      return;
+    }
+
+    const reposHTML = repos.map(repo => {
+      const language = repo.language || '__';
+      return `
+        <li>
+          <a href="${repo.html_url}" target="_blank" class="repo-name">
+            ${repo.name}
+          </a>
+          <div class="repo-stats">
+          <span class="repo-stat" title="Estrelas">⭐Stars: ${repo.stargazers_count}</span>
+          <span class="repo-stat" title="Forks">🍴Forks: ${repo.forks_count}</span>
+          <span class="repo-stat" title="Watchers">👀Watchers: ${repo.watchers_count}</span>
+          <span class="repo-stat" title="Linguagem">👩‍💻</i>Linguagem: ${language}</span>
+          </div>
+        </li>
+      `;
+    }).join(''); // Concatena os itens do array em uma única string (elimina as vírgulas de separação entre um item e outro por padrão)
+
+    repoList.innerHTML = reposHTML;
   },
 
   showError(message) {

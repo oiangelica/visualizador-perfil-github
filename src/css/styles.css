@@ -217,3 +217,83 @@ main a {
   font-size: 2rem;
   font-weight: bold;
 }
+
+.repositories {
+  text-align: left;
+  margin-bottom: var(--spacing-2xl);
+  width: 100%;
+}
+
+.repositories h3 {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary);
+  border-bottom: 2px solid var(--muted);
+  padding-bottom: var(--spacing-xs);
+  text-align: center;
+
+}
+
+.repo-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+}
+
+.repo-list li {
+  border: 1px solid var(--border);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.repo-list li:hover {
+  border-color: var(--ring);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.repo-name {
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: var(--font-sm);
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.repo-name:hover {
+  color: #667eea;
+}
+
+.repo-stats {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: auto;
+  cursor: default;
+}
+
+.repo-stat {
+  font-size: 0.7rem;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 2px 6px;
+  border-radius: 50px;
+  color: var(--muted-foreground);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.repo-stat i {
+  font-size: 0.8rem;
+}

@@ -17,8 +17,13 @@ export const SearchService = {
       UI.showLoading();
       UI.clearResults();
 
-      const userData = await API.fetchUser(cleanedUserName);
+      const [userData, repos] = await Promise.all([
+        API.fetchUser(cleanedUserName),
+        API.fetchRepos(cleanedUserName)
+      ]);
+
       UI.renderProfile(userData);
+      UI.renderRepos(repos);
     } catch (error) {
       UI.showError('Usuário não encontrado. Por favor verifique o nome de usuário e tente novamente.');
       console.error('Erro ao buscar usuário:', error);
