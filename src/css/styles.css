@@ -51,9 +51,11 @@ main {
   flex-direction: column;
   padding: var(--spacing-2xl) var(--spacing-md);
 }
-main a { 
+
+main a {
   margin-bottom: 1rem;
 }
+
 .devicon-github-original {
   font-size: var(--font-3xl);
   margin-bottom: var(--spacing-xl);
@@ -296,4 +298,20 @@ main a {
 
 .repo-stat i {
   font-size: 0.8rem;
+}
+
+.footer {
+  font-size: .8rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+}
+
+.github-icon {
+  font-size: 0.9rem;
+}
+
+.footer a {
+  font-weight: 600;
 }
