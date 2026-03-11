@@ -1,8 +1,8 @@
 # 🔍 Visualizador de Perfil do GitHub
 
-![GitHub top language](https://img.shields.io/github/languages/top/seu-usuario/visualizador-perfil-github?style=for-the-badge)
-![GitHub repo size](https://img.shields.io/github/repo-size/seu-usuario/visualizador-perfil-github?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/seu-usuario/visualizador-perfil-github?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/oiangelica/visualizador-perfil-github?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/oiangelica/visualizador-perfil-github?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/oiangelica/visualizador-perfil-github?style=for-the-badge)
 
 Uma aplicação web simples e elegante que utiliza a API do GitHub para buscar e exibir informações detalhadas de perfis de usuários, incluindo estatísticas e repositórios.
 
