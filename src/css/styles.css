@@ -245,6 +245,12 @@ main a {
   padding: 0;
 }
 
+.empty-repos-message {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: var(--spacing-xl) 0;
+}
+
 .repo-list li {
   border: 1px solid var(--border);
   padding: var(--spacing-md);

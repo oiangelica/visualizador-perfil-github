@@ -16,13 +16,13 @@ export const UI = {
   },
 
   renderProfile(userData) {
-    const bio = userData.bio || 'Não possui bio cadastrada 😢';
+    const bio = userData.bio || 'Não possui bio cadastrada. 😢';
     
     DOM.profileResults.innerHTML = `
       <div class="profile-card">
         <img src="${userData.avatar_url}" alt="Foto de perfil do usuário ${userData.name}" class="profile-avatar">
         <div class="profile-infos">
-          <h2>${userData.name}</h2>
+          <h2>${userData.name || "Não pussui nome cadastrado. 😢"}</h2>
           <p>${bio}</p>
         </div>
       </div>
@@ -47,7 +47,7 @@ export const UI = {
     const repoList = document.querySelector('.repo-list');
     
     if (repos.length === 0) {
-      repoList.innerHTML = '<li>Este usuário não possui repositórios públicos.</li>';
+      repoList.innerHTML = '<p class="empty-repos-message">Este usuário não possui repositórios públicos. 😢</p>';
       return;
     }
 
